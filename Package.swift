@@ -11,7 +11,7 @@ let package = Package(
         .binaryTarget(
             name: "SwiftSyntaxWrapper",
             url: "https://github.com/ordo-one/swift-syntax-xcframeworks/releases/download/600.0.1/SwiftSyntaxWrapper.xcframework.zip",
-            checksum: "324220ef6cbb1edfffa5cba4687eb79e9f2b43dc0301a613cc7a07defbccdce2"
+            checksum: "3c91053a22c60d522f1ae11a5d1737a60f08842a21b5a972b7a15fe7d80673de"
         ),
     ]
 )
