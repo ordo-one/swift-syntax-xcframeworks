@@ -120,6 +120,7 @@ for ((i = 0; i < ${#PLATFORMS[@]}; i += 2)); do
         -derivedDataPath $DERIVED_DATA_PATH \
         SKIP_INSTALL=NO \
         BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
+        SWIFT_SERIALIZE_DEBUGGING_OPTIONS=NO \
         | xcbeautify
 
     for MODULE in ${MODULES[@]}; do
