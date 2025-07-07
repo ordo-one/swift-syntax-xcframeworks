@@ -42,6 +42,21 @@ set -eux
 
 git clone --branch $SWIFT_SYNTAX_VERSION --single-branch $SWIFT_SYNTAX_REPOSITORY_URL
 
+
+# Remove dynamic library if
+awk '
+/^if buildDynamicLibrary \{$/ { print; print "  products = []"; skip=1; next }
+/^} else \{$/ { print; skip=0; next }
+skip { next }
+{ print }
+' "$SWIFT_SYNTAX_NAME/Package.swift" > temp && mv temp "$SWIFT_SYNTAX_NAME/Package.swift"
+
+# add library
+sed -i '' -E '/\.library\(name: "SwiftBasicFormat", targets: \["SwiftBasicFormat"\]\),/a\
+   .library(name: "SwiftSyntaxWrapper", targets: ["SwiftSyntaxWrapper"]),
+' "$SWIFT_SYNTAX_NAME/Package.swift"
+
+
 #
 # Add static wrapper product
 #
