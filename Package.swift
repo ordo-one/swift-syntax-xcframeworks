@@ -10,8 +10,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SwiftSyntaxWrapper",
-            url: "https://github.com/ordo-one/swift-syntax-xcframeworks/releases/download/601.0.1/SwiftSyntaxWrapper.xcframework.zip",
-            checksum: "1e03a8b8fb763b80723aed57003ef119af8ba8391b76a442f53cd7628992e04a"
+            url: "https://github.com/ordo-one/swift-syntax-xcframeworks/releases/download/602.0.0/SwiftSyntaxWrapper.xcframework.zip",
+            checksum: "2cdee77113e43228846f8494ecc79c92236c0242efcf4a3652fea5bf0d1f9b18"
         ),
     ]
 )
